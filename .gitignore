@@ -16,8 +16,8 @@ user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 /vendor/
 application/vendor/
-application/node_modules
-public/plugban
+node_modules
+public/assets/plugin
 
 # IDE Files
 #-------------------------
