@@ -18,6 +18,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 application/vendor/
 node_modules
 public/assets/plugin
+yarn-error.log
 
 # IDE Files
 #-------------------------
