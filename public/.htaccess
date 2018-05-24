@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    Options -Indexes
+    DirectoryIndex index.php
+    RewriteEngine On
+    RewriteCond $1 !^(index\.php|assets|images|css|js|install|robots\.txt|favicon\.ico)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Authorization Header
+    # RewriteCond %{HTTP:Authorization} .
+    # RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>

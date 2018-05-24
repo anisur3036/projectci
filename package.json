@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"scripts": {
+		"no-script": "no script"	
+	},
+	"devDependencies": {
+		"autoprefixer": "^8.3.0",
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"font-awesome": "^4.7.0",
+		"gulp": "^3.9.1",
+		"gulp-babel": "^7.0.1",
+		"gulp-js-minify": "^0.0.3",
+		"gulp-postcss": "^7.0.1",
+		"gulp-sass": "^4.0.1",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-webserver": "^0.9.1",
+		"lodash": "^4.17.5",
+		"tailwindcss": "^0.5.2"
+	}
+}
