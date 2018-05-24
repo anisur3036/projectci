@@ -285,14 +285,7 @@ desired effect
     <section class="content">
 
       <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-          <!-- small box -->
-          <div class="">
-            <div id="container">
-              @yield('content')
-            </div>
-          </div>
-        </div>
+        @yield('content')
       </div>
     </section>
     <!-- /.content -->

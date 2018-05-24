@@ -10,6 +10,7 @@ class My_Controller extends CI_Controller {
 
 	protected $views = APPPATH . 'views';
 	protected $cache = APPPATH . 'cache';
+	protected $models = APPPATH . 'models';
 	protected $blade;
 
 	public function __construct() {
