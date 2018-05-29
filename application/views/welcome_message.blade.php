@@ -2,31 +2,22 @@
 
 
 @section('content')
-	<h1><span class="glyphicon glyphicon-user"></span>  Welcome to CodeIgniter!</span></h1>
-	<div id="page-header">
-		<form action="" method="POST" role="form">
+@php 
+  $ci = & get_instance()  
+@endphp
 
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="text" class="form-control" id="email" name="email">
-				<span class="help-block">{!! form_error('email') !!}</span>
-			</div>
+<div class="col-lg-8 col-md-12 col-sm-12 col-lg-offset-2">
+		<div class="box box-primary">
+					  {{-- first get ci instance --}}
+		<div class="box-header">
+		  <h3 class="box-title">Message</h3>		
+		</div>
+		<div>
 
-			<div class="form-group">
-				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" name="email">
-				<span class="help-block">{!! form_error('password') !!}</span>
-			</div>
-
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
+			@if ($ci->session->flashdata('success'))
+				<div class="alert alert-success">{{ $ci->session->flashdata('success') }}</div>
+			@endif
+		</div>
 	</div>
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-	{{ config_item('language') }}
-	<p>{{ $subjects['ok'] }}</p>
-	<p>{{ $subjects['gd'] }}</p>
-	<p>{{ $subjects['msg'] }}</p>
-
-	<br>
-	{{-- {{ lang("msg_view_english") }} --}}
+</div>
 @endsection

@@ -1,13 +1,16 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Categories extends My_Controller {
-	public function index() {
+class Categories extends My_Controller
+{
+	public function index()
+	{
 		$data = $this->Category_model->get_list();
 		echo $this->blade->view()->make('blog_admin/category/index', ['categories' => $data]);
 	}
 
-	public function add() {
+	public function add()
+	{
 
 		$this->form_validation->set_error_delimiters('<span class="help-block">', '</span>');
 		$this->form_validation->set_rules('category', 'Category Name', 'trim|required|min_length[3]');

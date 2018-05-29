@@ -6,9 +6,11 @@ class LanguageLoader {
 		$ci->load->helper('language');
 		//$ci->lang->load('message', 'bangla');
 
-		$site_lang = $ci->db->query('select * from lang where id = 2')->row()->lang;
+		$site_lang = $ci->db->query('select * from lang where active = 1')->num_rows();
+		$lang = 'bangla';
+		// var_dump($site_lang);
 		if ($site_lang) {
-			$ci->lang->load('message', $site_lang);
+			$ci->lang->load('message', $lang);
 		} else {
 			$ci->lang->load('message', 'english');
 		}
