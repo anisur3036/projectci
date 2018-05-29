@@ -1,3 +1,6 @@
+@php 
+  $ci = & get_instance();
+@endphp
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,9 +59,9 @@ desired effect
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+    <span class="logo-mini">{{ $ci->lang->line('blog-title-sm') }}</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg">{{ $ci->lang->line('blog-title') }}</span>
     </a>
 
     <!-- Header Navbar -->
@@ -252,7 +255,7 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span></span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
@@ -276,8 +279,8 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
-        <small>Control panel</small>
+        {{ $ci->lang->line('blog-dashboard') }}
+        <small>{{ $ci->lang->line('blog-control-panel') }}</small>
       </h1>
     </section>
 
@@ -316,13 +319,13 @@ desired effect
         <h3 class="control-sidebar-heading">Recent Activity</h3>
         <ul class="control-sidebar-menu">
           <li>
-            <a href="javascript:;">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+            <a href="/admin/langs/">
+              <i class="menu-icon fa fa-flag bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <h4 class="control-sidebar-subheading">Language</h4>
 
-                <p>Will be 23 on April 24th</p>
+                <p>Change your language</p>
               </div>
             </a>
           </li>
